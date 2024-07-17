@@ -1,0 +1,419 @@
+.introduccion-de-sastreria {
+    display: flex;
+    align-items: center;
+    padding: 70px;
+    background-color: #f9f9f9;
+  }
+  
+  .imagen-de-sastreria {
+    flex: 1;
+    text-align: center;
+    max-width: 100%;
+    padding: 0 20px; /* Añade un poco de espacio a los lados para evitar que la imagen esté pegada a los bordes */
+  }
+  
+  .imagen-de-sastreria img {
+    width: 900px; /* Ancho máximo inicial de la imagen */
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  @media (max-width: 768px) {
+    .imagen-de-sastreria img {
+      max-width: 400px; /* Reducir el ancho máximo para pantallas más pequeñas */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .imagen-de-sastreria img {
+      max-width: 300px; /* Reducir aún más el ancho máximo para pantallas más pequeñas */
+    }
+  }
+  
+  .sastreria-texto {
+    flex: 2;
+    padding: 0 20px;
+  }
+  
+  .sastreria-texto h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  .sastreria-texto p {
+    font-size: 1.2rem;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+  
+  @media (max-width: 768px) {
+    .introduccion-de-sastreria {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .imagen-de-sastreria,
+    .sastreria-texto {
+      flex: none;
+      width: 100%;
+    }
+  
+    .sastreria-texto {
+      padding: 20px 0;
+    }
+  }
+  .introduccion-de-sastreria {
+    display: flex;
+    align-items: center;
+    padding: 70px;
+    background-color: #f9f9f9;
+  }
+  
+  .imagen-de-sastreria {
+    flex: 1;
+    text-align: center;
+    max-width: 100%;
+    padding: 0 20px; /* Añade un poco de espacio a los lados para evitar que la imagen esté pegada a los bordes */
+  }
+  
+  .imagen-de-sastreria img {
+    width: 100%;
+    max-width: 600px; /* Ancho máximo inicial de la imagen */
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  @media (max-width: 768px) {
+    .imagen-de-sastreria img {
+      max-width: 400px; /* Reducir el ancho máximo para pantallas más pequeñas */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .imagen-de-sastreria img {
+      max-width: 300px; /* Reducir aún más el ancho máximo para pantallas más pequeñas */
+    }
+  }
+  
+  .sastreria-texto {
+    flex: 2;
+    padding: 0 20px;
+  }
+  
+  .sastreria-texto h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  .sastreria-texto p {
+    font-size: 1.2rem;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+  
+  @media (max-width: 768px) {
+    .introduccion-de-sastreria {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .imagen-de-sastreria,
+    .sastreria-texto {
+      flex: none;
+      width: 100%;
+    }
+  
+    .sastreria-texto {
+      padding: 20px 0;
+    }
+}
+
+.nuestro-beneficios {
+  padding: 70px;
+  background-color: #f9f9f9;
+}
+
+.beneficios-general {
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px; /* Espacio entre beneficios */
+  justify-content: space-around;
+}
+
+.beneficios {
+  width: calc(50% - 30px); /* Dos columnas con espacio entre ellas */
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+  padding: 20px;
+  text-align: center;
+}
+
+.beneficios:hover {
+  transform: translateY(-10px);
+}
+
+.beneficios img {
+  width: 150px; /* Tamaño de imagen */
+  height: 150px;
+  border-radius: 50%; /* Forma de imagen */
+  margin-bottom: 20px;
+}
+
+.beneficios-texto {
+  text-align: center;
+}
+
+.beneficios-texto h2 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.beneficios-texto p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+  .beneficios {
+    width: 100%; /* Una columna en pantallas pequeñas */
+    margin-bottom: 20px;
+  }
+}
+/* Contenedor del carrusel */
+.carousel {
+  position: relative;
+  width: 100%;
+  margin: auto;
+  overflow: hidden;
+}
+
+.carousel .slider {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  will-change: transform;
+  overflow-x: auto; /* Permite desplazamiento horizontal en pantallas pequeñas */
+  scroll-snap-type: x mandatory; /* Asegura un desplazamiento suave */
+}
+
+.slider img {
+  height: auto; /* Ajusta la altura automáticamente */
+  margin: 10px; /* Espacio entre imágenes */
+  object-fit: cover; /* Ajusta la imagen para cubrir el contenedor */
+  flex-shrink: 0; /* Evita que las imágenes se encogen más allá de su tamaño original */
+  transition: transform 0.3s;
+}
+
+.slider img:hover {
+  transform: scale(1.1); /* Efecto de zoom al pasar el cursor */
+}
+
+/* Flechas de navegación */
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 55px;
+  height: 55px;
+  background-color: #000000;
+  border-radius: 50%;
+  color: #ffffff;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.arrow.right {
+  right: 10px;
+}
+
+.arrow.left {
+  left: 10px;
+}
+
+.arrow:hover {
+  background-color: #dddddd;
+  color: #000000;
+  transform: translateY(-50%) scale(1.1);
+}
+
+/* Estilos para las flechas */
+.arrow.right::before,
+.arrow.left::before {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-top: 12px solid transparent;
+  border-bottom: 12px solid transparent;
+}
+
+.arrow.right::before {
+  border-left: 18px solid #ffffff;
+  right: 10px;
+}
+
+.arrow.left::before {
+  border-right: 18px solid #ffffff;
+  left: 10px;
+}
+
+/* Media Queries */
+@media (min-width: 1400px) {
+  .slider img {
+    width: calc(100% / 6 - 20px); /* Muestra 6 imágenes en pantallas muy grandes */
+  }
+}
+
+@media (max-width: 1399px) and (min-width: 1200px) {
+  .slider img {
+    width: calc(100% / 5 - 20px); /* Muestra 5 imágenes en pantallas grandes */
+  }
+}
+
+@media (max-width: 1199px) and (min-width: 1024px) {
+  .slider img {
+    width: calc(100% / 4 - 20px); /* Muestra 4 imágenes en pantallas medianas */
+  }
+}
+
+@media (max-width: 1023px) and (min-width: 768px) {
+  .slider img {
+    width: calc(100% / 3 - 20px); /* Muestra 3 imágenes en pantallas pequeñas */
+  }
+}
+
+@media (max-width: 767px) and (min-width: 480px) {
+  .slider img {
+    width: calc(100% / 2 - 20px); /* Muestra 2 imágenes en pantallas extra pequeñas */
+  }
+}
+
+@media (max-width: 479px) {
+  .slider img {
+    width: calc(100% - 20px); /* Muestra 1 imagen en pantallas muy pequeñas */
+  }
+}
+.nuestros-ventajas {
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin: 20px;
+  flex-wrap: wrap; /* Permite que los elementos se ajusten en varias líneas en pantallas pequeñas */
+}
+
+.nuestros-ventajas {
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin: 20px;
+  flex-wrap: wrap; /* Permite que los elementos se ajusten en varias líneas en pantallas pequeñas */
+}
+
+.ventaja {
+  flex: 1;
+  min-width: 30%; /* Ajusta el ancho mínimo para mantener tres columnas */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, background-color 0.3s ease; /* Transición suave */
+  text-align: center;
+  margin-bottom: 20px; /* Espacio entre filas en pantallas pequeñas */
+  background-color: #333; /* Color de fondo por defecto */
+  color: #fff; /* Color del texto por defecto */
+  position: relative;
+  overflow: hidden;
+  clip-path: polygon(50% 0%, 100% 20%, 100% 80%, 50% 100%, 0% 80%, 0% 20%); /* Rombo alargado */
+}
+
+.ventaja:hover {
+  transform: translateY(-5px); /* Efecto de elevación al pasar el cursor */
+}
+
+.ventaja1 {
+  background-color: #ffe96b; /* Dorado */
+}
+
+.ventaja2 {
+  background-color: #ffcc6e; /* Naranja */
+}
+
+.ventaja3 {
+  background-color: #00ff95; /* Verde */
+}
+
+.ventaja h3 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+  color: #222; /* Color del título */
+  background-color: rgba(255, 255, 255, 0.8); /* Fondo claro para el título */
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.ventaja p {
+  font-size: 1.5em;
+  line-height: 1.6;
+  color: #fff; /* Color del párrafo */
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .ventaja {
+      min-width: 45%; /* Ajusta el ancho para dos columnas en pantallas medianas */
+  }
+}
+
+@media (max-width: 768px) {
+  .ventaja {
+      min-width: 100%; /* Ajusta el ancho para una columna en pantallas pequeñas */
+      margin-bottom: 20px;
+  }
+}
+
+/* Estilo adicional para mayor atractivo */
+.ventaja1:hover {
+  background-color: #ffd700; /* Cambia a un tono dorado más brillante al pasar el cursor */
+}
+
+.ventaja2:hover {
+  background-color: #ffa500; /* Cambia a un tono naranja más brillante al pasar el cursor */
+}
+
+.ventaja3:hover {
+  background-color: #00cc66; /* Cambia a un tono verde más brillante al pasar el cursor */
+}
+.lema {
+  width: 100%;
+  max-width: 1349px;
+  height: auto;
+  max-height: 580px;
+  }
+@media(max-whith:740px){
+  .lema{
+    max-width: 200px;
+    height: auto;
+
+  }
+}
+  

@@ -1,0 +1,567 @@
+.imagen-portada {
+    width: 100%;
+    max-width: 1370px;
+    height: auto;
+    max-height: 580px;
+  }
+  @media(max-width:768px){
+    .imagen-portada {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    max-height: 580px;
+  } 
+  }
+  
+  .carousel-container {
+    padding-bottom: 30px;
+    padding-top:100px;
+    padding-left: 30px;
+    padding-right: 30px;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .carousel-title {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: bold;
+  }
+  
+  .carousel {
+    border-radius: 20px;
+    background: #00a2ff;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  .carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    will-change: transform;
+  }
+  
+  .carousel-item {
+    min-width: 100%;
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s;
+  }
+  
+  .carousel-item img {
+    width: 70%;
+    transition: transform 0.3s;
+  }
+  
+  .carousel-item:hover img {
+    transform: scale(1.1); /* Efecto de zoom al pasar el cursor */
+  }
+  
+  .carousel-item figcaption {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    padding-left: 10px;
+    color: #fff;
+    transition: opacity 0.3s;
+    opacity: 1;
+  }
+  
+  .carousel-item figcaption h3 {
+    font-size: 20px;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  .carousel-item figcaption .btn-carousel {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #f90;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    opacity: 1; /* Siempre visible */
+  }
+  
+  .carousel-item figcaption .btn-carousel:hover {
+    background-color: rgb(255, 204, 0); /* Cambio de color al pasar el cursor */
+  }
+  
+  @media (min-width: 768px) {
+    .carousel-item {
+        min-width: 50%;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .carousel-item {
+        min-width: 33.33%;
+    }
+  }
+  
+  @media (min-width: 1200px) {
+    .carousel-item {
+        min-width: 25%;
+    }
+  }
+  
+  @media (min-width: 1400px) {
+    .carousel-item {
+        min-width: 20%;
+    }
+  }
+  
+  .intro-section {
+    display: flex;
+    align-items: center;
+    padding:40px;
+    background-color: #f9f9f9;
+  }
+  
+  .intro-image {
+    flex: 1;
+    text-align: center;
+    max-width: 100%;
+    padding: 0 20px; /* Añade un poco de espacio a los lados para evitar que la imagen esté pegada a los bordes */
+  }
+  
+  .intro-image img {
+    max-width: 800px;
+    height: auto; /* La altura se ajusta automáticamente para mantener la proporción */
+    border-radius: 8px;
+  }
+  
+  
+  @media (max-width: 768px) {
+    .intro-image img {
+        max-width: 200px; /* Reducir el ancho máximo para pantallas más pequeñas */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .intro-image img {
+        max-width: 250px; /* Reducir aún más el ancho máximo para pantallas más pequeñas */
+    }
+  }
+  
+  
+  .intro-info {
+    flex: 2;
+    padding: 0 20px;
+  }
+  
+  .intro-info h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  .intro-info p {
+    font-size: 1.2rem;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+  
+  @media (max-width: 768px) {
+    .intro-section {
+        flex-direction: column;
+        text-align: center;
+    }
+  
+    .intro-image,
+    .intro-info {
+        flex: none;
+        width: 100%;
+    }
+  
+    .intro-info {
+        padding: 20px 0;
+    }
+  }
+  /* Estilos generales */
+  .portada-2 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(to bottom, #1100ff, #3923ff, rgb(255, 0, 0));
+      width: 100%;
+      max-width: 1349px;
+      height: 350px;
+      padding: 20px;
+      box-sizing: border-box;
+  }
+  
+  .portada-2::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+      pointer-events: none;
+      border-radius: 10px;
+  }
+  
+  /* Estilos de la sección de publicidad */
+  .publicidad {
+      flex: 1;
+      max-width: 400px;
+      padding: 20px;
+      z-index: 1;
+  }
+  
+  .publicidad p {
+    text-align: center;
+      font-weight: 700;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 70px;
+      color: #fff;
+      margin-bottom: 10px;
+  }
+  
+  /* Estilos de la sección de confección textil y soldadura */
+  .publicidad-2 {
+      flex: 1;
+      max-width: 400px;
+      text-align: center;
+      padding: 20px;
+      z-index: 1;
+  }
+  
+  .publicidad-2 p {
+      font-weight: 700;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      font-size: 24px;
+      color: #fff;
+      margin-bottom: 10px;
+  }
+  
+  /* Estilos de la sección de imágenes */
+  .imagen-publicidad {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+  }
+  
+  .imagen-publicidad img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+  }
+  
+  /* Estilos del botón "Conocer Más" */
+  .publicidad-boton {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+  }
+  
+  .portada-2 button {
+      font-size: 20px;
+      width: 200px;
+      height: 50px;
+      font-weight: 900;
+      padding: 10px 20px;
+      background-color: #ffc400;
+      color: white;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+  }
+  
+  .portada-2 button:hover {
+      background-color: #ffa500;
+  }
+  
+  @media screen and (max-width: 768px) {
+      /* Estilos para dispositivos móviles */
+      .portada-2 {
+          flex-direction: column;
+          height: auto;
+          padding: 20px;
+      }
+  
+      .publicidad,
+      .publicidad-2,
+      .imagen-publicidad,
+      .publicidad-boton {
+          max-width: 100%;
+          text-align: center;
+          padding: 10px 0;
+      }
+  
+      .publicidad p {
+          font-size: 28px;
+      }
+  
+      .publicidad-2 p {
+          font-size: 20px;
+      }
+  
+      .portada-2 button {
+          font-size: 16px;
+          width: 150px;
+          height: 40px;
+          padding: 10px 15px;
+      }
+  }
+  
+  /* Contenedor de servicios */
+  .servicios-container {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  /* Título de la sección */
+  .titulo-servicios {
+    font-size: 28px; /* Reduce font size */
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: #333;
+  }
+  
+  /* Contenedor de los servicios */
+  .servicios {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    position: relative; /* Agregamos posición relativa para el posicionamiento absoluto de overlay */
+  }
+  
+  /* Estilo de cada servicio */
+  .servicio {
+    position: relative;
+    flex: 1;
+    margin: 0 70px;
+    overflow: hidden;
+    border: 2px solid #f0f0f0;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer; /* Cambio el cursor a pointer para indicar que es interactivo */
+  }
+  
+  .servicio:hover {
+    transform: scale(1.05);
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Estilo de la imagen del servicio */
+  .servicio img {
+    display: block;
+    width: 100%;
+    height: 30em; /* Reduce height */
+    transition: transform 0.3s ease;
+  }
+  
+  .servicio:hover img {
+    transform: scale(1.05);
+  }
+  
+  /* Superposición siempre visible para el nombre del servicio */
+  .overlay {
+    position: absolute;
+    top: 50%; /* Centra verticalmente */
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    text-align: center;
+    color: #fff;
+    font-size: 24px; /* Tamaño del texto del nombre */
+    opacity: 0; /* Oculto por defecto */
+    transition: opacity 0.3s ease;
+  }
+  
+  /* Superposición oculta por defecto para el lema y el botón */
+  .overlay-content {
+    position: absolute;
+    top: 50%; /* Centra verticalmente */
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px; /* Aumentar padding para el contenido */
+    text-align: center;
+    color: #fff;
+    font-size: 18px; /* Tamaño del texto del lema */
+    opacity: 0; /* Oculto por defecto */
+    transition: opacity 0.3s ease;
+  }
+  
+  .servicio:hover .overlay {
+    opacity: 1; /* Mostrar nombre cuando se hace hover */
+  }
+  
+  .servicio:hover .overlay-content {
+    opacity: 1; /* Mostrar lema y botón cuando se hace hover */
+  }
+  
+  .overlay h2 {
+    font-size: 28px; /* Tamaño del texto del nombre cuando se hace hover */
+    margin-bottom: 10px; /* Ajustar margen */
+  }
+  
+  .overlay p {
+    font-size: 20px; /* Tamaño del texto del lema cuando se hace hover */
+    font-style: italic;
+  }
+  
+  .btn-contratar {
+    margin-top: 15px;
+    padding: 10px 20px; /* Ajustar padding */
+    font-size: 18px; /* Tamaño del texto del botón */
+    color: #fff;
+    background-color: #ff6600;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .btn-contratar:hover {
+    background-color: #ff4500;
+    transform: scale(1.1);
+  }
+  
+  @media (max-width: 768px) {
+    .servicios {
+      flex-direction: column;
+      text-decoration: none; /* Elimina subrayado del enlace */
+    }
+    .servicio a {
+      pointer-events: none; /* Desactiva los eventos de puntero */
+      cursor: default; /* Cambia el cursor a predeterminado */
+      text-decoration: none; /* Elimina subrayado del enlace */
+    }
+  
+    .servicio {
+      margin: 10px 0;
+    }
+  }
+  
+  .contacto {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 800px; /* Altura fija para pantallas grandes */
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+  
+  .imagen-2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; /* Ajusta la altura al 100% para cubrir completamente el contenedor */
+    z-index: -1; /* Asegura que la imagen de fondo esté detrás del formulario */
+  }
+  
+  .imagen-2 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ajusta la imagen para cubrir todo el contenedor */
+    opacity: 1; /* Ajusta la opacidad según prefieras */
+  }
+  
+  .contact-form {
+    position: relative;
+    z-index: 1; /* Asegura que el formulario esté encima de la imagen de fondo */
+    max-width: 800px;
+    width: 90%; /* Ancho máximo para pantallas grandes */
+    margin: 0 auto; /* Centra el formulario horizontalmente */
+    background-color: rgba(255, 255, 255, 0.753); /* Fondo semi-transparente */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .contact-form h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+    text-align: left; /* Alinea el texto a la izquierda dentro del formulario */
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    width: 100%; /* Ajusta el ancho al 100% para que sea responsive */
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; /* Asegura que el padding no afecte el ancho total */
+  }
+  
+  .form-group textarea {
+    resize: vertical;
+  }
+  
+  .btn-contact {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-contact:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Media query para dispositivos móviles */
+  @media (max-width: 768px) {
+    .contacto {
+      height: auto; /* Altura automática para dispositivos móviles */
+    }
+  
+    .imagen-2 {
+      height: 400px; /* Ajusta la altura de la imagen para dispositivos móviles */
+    }
+  
+    .contact-form {
+      padding: 10px; /* Ajusta el padding para dispositivos móviles */
+    }
+  
+  }
+  .imagen-lema{
+    width: 100%;
+    max-width: 1349px;
+    height: auto;
+    max-height: 580px;
+  }
