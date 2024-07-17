@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nosotros - Servicios</title>
+<style>
+/* Estilos para la página */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+  }
+  .header {
+    background-color: #4682B4;
+    color: white;
+    text-align: center;
+    padding: 1.5em;
+  }
+  .services-section {
+    padding: 4em;
+  }
+  .services-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  .service-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+    width: 500px;
+    margin: 2em;
+    padding: 2em;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  .service-card:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  }
+  .service-card img {
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+  }
+  .service-card h3 {
+    color: #4682B4;
+    margin-top: 20px;
+    font-size: 2em;
+  }
+  .service-card p {
+    margin: 20px 0;
+    font-size: 1.2em;
+  }
+  .service-card button {
+    background-color: #4682B4;
+    color: white;
+    border: none;
+    padding: 14px 28px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.2em;
+    transition: background-color 0.3s;
+  }
+  .service-card button:hover {
+    background-color: #365f91;
+  }
+  /* Estilos para el formulario */
+  .overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+    overflow: auto;
+    opacity: 0;
+    transition: opacity 0.5s;
+  }
+  .overlay.active {
+    display: block;
+    opacity: 1;
+  }
+  .form-container {
+    background-color: #ffffff;
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    transform: scale(0.7);
+    transition: transform 0.3s;
+  }
+  .form-container.open {
+    transform: scale(1);
+  }
+  .form-header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .form-group {
+    margin-bottom: 20px;
+  }
+  .form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  .form-group input, .form-group textarea, .form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+  .form-group textarea {
+    height: 120px;
+  }
+  .form-buttons {
+    text-align: center;
+    margin-top: 20px;
+  }
+  .form-buttons button {
+    padding: 12px 24px;
+    margin-right: 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+  .form-buttons button.close-btn {
+    background-color: #ccc;
+    color: #333;
+  }
+  .form-buttons button.submit-btn {
+    background-color: #4682B4;
+    color: #fff;
+  }
+  
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>Conócenos y Nuestros Servicios</h1>
+</div>
+
+<div class="services-section">
+  <h2 style="text-align: center;">Nuestros Servicios</h2>
+  <div class="services-container">
+    <div class="service-card">
+      <img src="textil.jpg" alt="Servicio Textil">
+      <h3>Servicios Textiles</h3>
+      <p>Ofrecemos servicios de fabricación y diseño de prendas de alta calidad.</p>
+      <button onclick="openForm('textil')">Solicitar Servicio</button>
+    </div>
+    <div class="service-card">
+      <img src="soldadura.jpg" alt="Servicio de Soldadura">
+      <h3>Servicios de Soldadura</h3>
+      <p>Proveemos servicios de soldadura industrial y reparaciones especializadas.</p>
+      <button onclick="openForm('soldadura')">Solicitar Servicio</button>
+    </div>
+  </div>
+</div>
+
+<!-- Overlay y formulario -->
+<div id="overlay" class="overlay">
+  <div class="form-container">
+    <div class="form-header">
+      <h2 style="color: #4682B4;" id="form-title">Solicitud de Servicio</h2>
+    </div>
+    <form id="serviceRequestForm">
+      <div class="form-group">
+        <label for="nombre">Nombre y Apellido</label>
+        <input type="text" id="nombre" name="nombre" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Correo Electrónico</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div class="form-group">
+        <label for="tipoServicio">Tipo de Servicio Requerido</label>
+        <select id="tipoServicio" name="tipoServicio" required>
+          <option value="">Seleccione el tipo de servicio</option>
+          <option value="textil">Servicios Textiles</option>
+          <option value="soldadura">Servicios de Soldadura</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="descripcion">Descripción del Proyecto</label>
+        <textarea id="descripcion" name="descripcion" required></textarea>
+      </div>
+      <div class="form-buttons">
+        <button type="submit" class="submit-btn">Enviar</button>
+        <button type="button" class="close-btn" onclick="closeForm()">Cerrar</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<script>
+  // Función para abrir el formulario
+  function openForm(serviceType) {
+    const overlay = document.getElementById('overlay');
+    const formContainer = document.querySelector('.form-container');
+    const formTitle = document.getElementById('form-title');
+    const tipoServicioSelect = document.getElementById('tipoServicio');
+
+    formTitle.textContent = `Solicitud de Servicio - ${serviceType.charAt(0).toUpperCase() + serviceType.slice(1)}`;
+    tipoServicioSelect.value = serviceType;
+
+    overlay.classList.add('active');
+    setTimeout(() => {
+      formContainer.classList.add('open');
+    }, 100);
+  }
+
+  // Función para cerrar el formulario
+  function closeForm() {
+    const overlay = document.getElementById('overlay');
+    const formContainer = document.querySelector('.form-container');
+
+    formContainer.classList.remove('open');
+    setTimeout(() => {
+      overlay.classList.remove('active');
+    }, 500);
+  }
+
+  // Validación básica del formulario (puedes mejorar esto según tus necesidades)
+  const form = document.getElementById('serviceRequestForm');
+
+  form.addEventListener('submit', function(event) {
+    event.preventDefault(); // Evitar el envío por defecto para controlarlo manualmente
+    // Aquí puedes agregar tu lógica de validación y envío del formulario
+    // Por ejemplo, podrías usar fetch() para enviar los datos a tu backend
+    // y luego mostrar un mensaje de confirmación al usuario.
+    alert('Formulario enviado correctamente.');
+    closeForm(); // Cerrar el formulario después de enviarlo
+  });
+</script>
+
+</body>
+</html>
